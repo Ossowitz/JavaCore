@@ -1,4 +1,4 @@
-package functionalProgramming.functionalInterfaces;
+package functionalProgramming.functionalInterfaces.SupplierEx;
 
 import java.util.function.Supplier;
 
