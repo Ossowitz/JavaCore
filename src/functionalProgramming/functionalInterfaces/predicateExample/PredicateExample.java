@@ -1,4 +1,4 @@
-package functionalProgramming.functionalInterfaces;
+package functionalProgramming.functionalInterfaces.predicateExample;
 
 import java.awt.*;
 import java.util.function.Predicate;
