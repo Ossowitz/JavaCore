@@ -15,9 +15,15 @@ public class StreamDemo {
                 .toList();
 
         // filter
-        List<String> names = Arrays.asList("Reflection", "Collection", "Stream");
+        List<String> names = Arrays.asList("Reflection", "Collection", "tream");
         List<String> result = names.stream()
                 .filter(s -> s.startsWith("S"))
+                .toList();
+
+        // sorted
+        List<Integer> numbers = Arrays.asList(5, 4, 3, 2, 1);
+        List<Integer> sortResult = numbers.stream()
+                .sorted()
                 .toList();
 
     }
