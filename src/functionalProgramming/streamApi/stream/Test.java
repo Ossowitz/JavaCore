@@ -1,4 +1,4 @@
-package functionalProgramming.streamApi;
+package functionalProgramming.streamApi.stream;
 
 import java.util.Comparator;
 import java.util.List;

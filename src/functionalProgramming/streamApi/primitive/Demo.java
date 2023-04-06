@@ -1,7 +1,8 @@
 package functionalProgramming.streamApi.primitive;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Demo {
 
@@ -11,8 +12,11 @@ public class Demo {
                 .map(it -> it.concat(it))
                 .map(Integer::valueOf)
                 .filter(i -> i % 2 == 0)
-                .sorted(Comparator.reverseOrder())
                 .mapToInt(Integer::intValue)
+                .mapToObj(Integer::valueOf);
+
+        IntStream.range(0, 100)
+                .filter(it -> it % 2 == 0)
                 .forEach(System.out::println);
     }
 }
