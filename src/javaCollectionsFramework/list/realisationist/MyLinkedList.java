@@ -1,19 +1,42 @@
 package javaCollectionsFramework.list.realisationist;
 
+import java.util.Arrays;
+
 public class MyLinkedList {
 
     private Node head;
     private int size;
 
     public void add(int value) {
-        // If this is the first addition to the list
+
         if (head == null) {
             this.head = new Node(value);
         } else {
+            Node temp = head;
 
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+
+            temp.setNext(new Node(value));
         }
 
         size++;
+    }
+
+    @Override
+    public String toString() {
+        int[] result = new int[size];
+
+        int idx = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            result[idx++] = temp.getValue();
+            temp = temp.getNext();
+        }
+
+        return Arrays.toString(result);
     }
 
     private static class Node {
