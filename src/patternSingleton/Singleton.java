@@ -2,7 +2,7 @@ package patternSingleton;
 
 public class Singleton {
 
-    private static Singleton INSTANCE;
+    private static Singleton instance;
 
     private String value;
 
@@ -15,24 +15,25 @@ public class Singleton {
     }
 
     public static Singleton getInstance(String value) {
-        if (INSTANCE == null) {
-            INSTANCE = new Singleton(value);
+        if (instance == null) {
+            instance = new Singleton(value);
         }
 
-        return INSTANCE;
+        return instance;
     }
+
 }
 
-class SingletonTestExample {
+class SingletonExample {
 
     public static void main(String[] args) {
-        Singleton first = Singleton.getInstance("Hello!");
-        Singleton second = Singleton.getInstance("Bye");
+        Singleton firstInstance = Singleton.getInstance("Hello!");
+        Singleton secondInstance = Singleton.getInstance("Bye!");
 
-        System.out.println(first == second);
+        System.out.println(firstInstance == secondInstance);
 
-        System.out.println(first.getValue());
+        System.out.println(firstInstance.getValue());
 
-        System.out.println(second.getValue());
+        System.out.println(secondInstance.getValue());
     }
 }
