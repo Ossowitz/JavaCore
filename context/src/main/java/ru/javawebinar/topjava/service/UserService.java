@@ -19,6 +19,4 @@ public class UserService {
     public void delete(int id) {
         checkNotFoundWithId(repository.delete(id), id);
     }
-
-
 }
